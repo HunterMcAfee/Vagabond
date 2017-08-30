@@ -1,0 +1,7 @@
+<%= render "partials/post_form" %>
+
+<%= form_for [@city, @post], method: :delete do |f|%>
+    <%= f.submit "Delete", class: "btn btn-danger" %>
+<% end %>
+
+<%= link_to 'Back', city_path(@city) %>

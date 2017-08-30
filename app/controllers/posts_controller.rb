@@ -2,6 +2,7 @@ class PostsController < ApplicationController
     def index
         @posts = Post.all
     end
+
     def show
         @post = Post.find(params[:id])
         @city = City.find(params[:city_id])
@@ -17,6 +18,25 @@ class PostsController < ApplicationController
 
         redirect_to city_post_path(city, @post)
     end
+
+    def edit
+        @post = Post.find(params[:id])
+        @city = City.find(params[:city_id])
+    end
+
+    def update
+        @post = city.posts.find(params[:id])
+        @post.update(post_params)
+
+        redirect_to city_post_path(city, @post)
+    end
+
+    def destroy
+        @post = city.posts.find(params[:id])
+        @post.destroy
+    
+        redirect_to city_path(city)
+      end
 
     def city
         City.find(params[:city_id])
