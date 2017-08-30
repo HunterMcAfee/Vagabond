@@ -18,6 +18,10 @@ class PostsController < ApplicationController
         redirect_to city_post_path(city, @post)
     end
 
+    def city
+        City.find(params[:city_id])
+    end 
+
     private
     def post_params
        params.require(:post).permit(:title, :content) 

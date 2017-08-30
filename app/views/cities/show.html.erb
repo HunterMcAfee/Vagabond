@@ -1,8 +1,7 @@
 <h2><%= @city.name %></h2>
 
 <%= image_tag @city.photo, class: "city-image" %>
-
-
+<%= link_to "Make a Post", new_city_post_path(@city.id) %>
 <% @posts.each do |post| %>
     <div>
         <h4>Title: <%= post.title %></h4>
