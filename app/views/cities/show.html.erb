@@ -7,5 +7,6 @@
     <div>
         <h4>Title: <%= post.title %></h4>
         <p><%= post.content %></p>
+        <%= link_to 'View', city_post_path(@city.id, post.id) %>
     </div>
 <% end %>
