@@ -1,3 +1,11 @@
+<div class="container">
+<div class="row text-center">
+    <h2>Edit Post</h2>
+</div>
+
 <%= render "partials/post_form" %>
 
-<%= link_to 'Back', city_path(@city) %>
+<div class="row text-center">
+    <%= link_to 'Back', city_post_path(@city, @post), class: "btn btn-primary" %>
+</div>
+</div>

@@ -3,12 +3,13 @@
         <source src="https://fpdl.vimeocdn.com/vimeo-prod-skyfire-std-us/01/2150/8/210752209/722777953.mp4?token=1504198993-0x3457f5d7cbb1e285ae87ec2a12ae248b6c5d2e3a" type="video/mp4">
     </video>
 </div>
-
-<h1>Cities</h1>
-    <ul>
-        <% @cities.each do |city| %>
-            <li>
-                <%= link_to city.name, city %>
-            </li>
-        <% end %>
-    </ul>
+<div class="container">
+<div class="row text-center">
+    <h1 class="city-title">Cities</h1>
+</div>
+<div class="row text-center">
+<% @cities.each do |city| %>
+        <%= link_to city.name, city, class: "btn btn-default" %>
+<% end %>
+</div>
+</div>
