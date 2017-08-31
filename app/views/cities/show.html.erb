@@ -1,3 +1,4 @@
+<div class="container">
 <div class="card mb-3 text-center">
   <%= image_tag(@city.photo, :class => "card-img-top", :alt => "Card image cap") %>
   <div class="card-body">
@@ -6,7 +7,7 @@
   </div>
 </div>
 
-<div class="column text-center">
+<div class="col">
 <% @posts.reverse_each do |post| %>
     <div class="card" style="width: 20rem;">
         <div class="card-body">
@@ -16,4 +17,5 @@
         <%= link_to 'View', city_post_path(@city.id, post.id), class: "card-link" %>
     </div>
 <% end %>
+</div>
 </div>
