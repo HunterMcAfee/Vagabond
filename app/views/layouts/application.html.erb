@@ -9,13 +9,18 @@
   </head>
 
   <body>
-  <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <%= link_to "Vagabond", root_path, class: "site-title" %>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <%= link_to "Vagabond", root_path, class: "site-title" %>
+      </div>
     </div>
-  </div>
-</nav>
+    </nav>
+
+    <% if flash[:alert] %>
+    <div class="alert"><%= flash[:alert] %></div>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>

@@ -14,9 +14,15 @@ class PostsController < ApplicationController
     end
 
     def create
-        @post = city.posts.create!(post_params)
+        @post = city.posts.new(post_params)
 
-        redirect_to city_post_path(city, @post)
+        if @post.save
+            redirect_to city_post_path(city, @post)
+          else 
+            flash.alert = "Title must be less than 200 characters and Content cannot be blank"
+            redirect_to new_city_post_path
+          end
+        
     end
 
     def edit
@@ -26,9 +32,13 @@ class PostsController < ApplicationController
 
     def update
         @post = city.posts.find(params[:id])
-        @post.update(post_params)
-
-        redirect_to city_post_path(city, @post)
+        
+        if @post.update(post_params)
+            redirect_to city_post_path(city, @post)
+          else 
+            flash.alert = "Title must be less than 200 characters and Content cannot be blank"
+            redirect_to edit_city_post_path
+          end
     end
 
     def destroy
