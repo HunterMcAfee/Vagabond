@@ -1,9 +1,13 @@
-<%= form_for [@city, @post] do |f|%>
+<div class="row">
+<div class="col-md-8 col-md-offset-2">
+<%= form_for [@city, @post], class: "form-group" do |f|%>
   <%= f.label :title %>
-  <%= f.text_field :title %>
+  <%= f.text_field :title, class: "form-control" %>
   <br/>
   <%= f.label :content %>
-  <%= f.text_field :content %>
+  <%= f.text_area :content, class: "form-control" %>
   <br/>
-  <%= f.submit %>
+  <%= f.submit(:class => "btn btn-warning") %>
 <% end %>
+</div>
+</div>

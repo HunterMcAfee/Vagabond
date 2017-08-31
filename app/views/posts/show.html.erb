@@ -7,6 +7,9 @@
                 </div>
                 <div class="panel-body">
                 <%= link_to 'Edit', edit_city_post_path(@city, @post), class: "btn btn-warning" %>
+                <%= form_for [@city, @post], method: :delete do |f|%>
+                    <%= f.submit "Delete", data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+                <% end %>
                 </div>
             </div>
         </div>
