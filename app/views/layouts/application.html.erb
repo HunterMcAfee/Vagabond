@@ -9,7 +9,13 @@
   </head>
 
   <body>
-  <h1><%= link_to "Vagabond", root_path %></h1>
+  <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <%= link_to "Vagabond", root_path, class: "site-title" %>
+    </div>
+  </div>
+</nav>
     <%= yield %>
   </body>
 </html>
