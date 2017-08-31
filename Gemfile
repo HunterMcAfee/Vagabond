@@ -58,3 +58,4 @@ gem 'httparty'
 gem 'bootswatch-rails'
 gem 'devise'
 gem 'cancancan'
+

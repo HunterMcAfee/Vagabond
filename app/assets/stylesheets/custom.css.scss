@@ -17,8 +17,25 @@
     height: auto;
 }
 
+.navbar {
+    height: 70px;
+    border-bottom: none;
+}
+
+.logo {
+    height: 60px;
+    border: 0px;
+    padding-bottom: 10px;
+}
+
+.site-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+}
 body { 
-    padding-top: 80px; 
+    padding-top: 90px; 
 }
 
 .site-title {
@@ -26,11 +43,12 @@ body {
     text-decoration: none;
     color: white;
     padding-left: 10px;
+    padding-bottom: 10px;
 }
 
 .site-title:hover {
     text-decoration: none;
-    color: grey;
+    color: #ced7e5;
 }
 
 video { 
@@ -49,7 +67,18 @@ video {
 }
 
 .city-title {
+    font-size: 6em;
+}
+
+.site-title-main {
     font-size: 7em;
+    font-family: cursive;
+    font-weight: 900;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: space-between;
 }
 
 .alert {

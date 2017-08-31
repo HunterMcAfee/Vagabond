@@ -4,12 +4,18 @@
     </video>
 </div>
 <div class="container">
+
+<div class="row text-center">
+<h1 class="site-title-main">Welcome to Vagabond</h1>
+</div>
+
 <div class="row text-center">
     <h1 class="city-title">Cities</h1>
 </div>
+<br/>
 <% @cities.each do |city| %>
     <div class="row text-center">
-        <%= link_to city.name, city, class: "btn btn-default" %>
+        <%= link_to city.name, city, class: "btn btn-default btn-lg" %>
         <br/><br/>
     </div>
 <% end %>
