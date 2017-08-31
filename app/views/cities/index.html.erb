@@ -7,9 +7,11 @@
 <div class="row text-center">
     <h1 class="city-title">Cities</h1>
 </div>
-<div class="row text-center">
 <% @cities.each do |city| %>
+    <div class="row text-center">
         <%= link_to city.name, city, class: "btn btn-default" %>
+        <br/><br/>
+    </div>
 <% end %>
-</div>
+
 </div>
