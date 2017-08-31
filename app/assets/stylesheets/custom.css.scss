@@ -1,3 +1,6 @@
+@import "bootstrap";
+@import "bootswatch/paper/variables";
+@import "bootswatch/paper/bootswatch";
 
 .home-splash-image-container {
     display: inline;
@@ -10,6 +13,11 @@
 }
 
 .city-image {
-    width: 300px;
+    max-width: 600px;
     height: auto;
 }
+
+.card-img-top{
+    width:50%;
+    height:auto;
+  }

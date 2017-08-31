@@ -1,11 +1,19 @@
-<h2><%= @city.name %></h2>
+<div class="card mb-3 text-center">
+  <%= image_tag(@city.photo, :class => "card-img-top", :alt => "Card image cap") %>
+  <div class="card-body">
+    <h2 class="card-title"><%= @city.name %></h2>
+    <%= link_to "Make a Post", new_city_post_path(@city.id), class: "btn btn-primary" %>
+  </div>
+</div>
 
-<%= image_tag @city.photo, class: "city-image" %>
-<%= link_to "Make a Post", new_city_post_path(@city.id) %>
+<div class="column text-center">
 <% @posts.reverse_each do |post| %>
-    <div>
-        <h4>Title: <%= post.title %></h4>
-        <p><%= post.content %></p>
-        <%= link_to 'View', city_post_path(@city.id, post.id) %>
+    <div class="card" style="width: 20rem;">
+        <div class="card-body">
+        <h4 class="card-title"><%= post.title %></h4>
+        <h6 class="card-subtitle mb-2 text-muted">Posted by:</h6>
+        <p class="card-text"><%= post.content %></p>
+        <%= link_to 'View', city_post_path(@city.id, post.id), class: "card-link" %>
     </div>
 <% end %>
+</div>
