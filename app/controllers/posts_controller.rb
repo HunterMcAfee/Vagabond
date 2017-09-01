@@ -24,7 +24,7 @@ class PostsController < ApplicationController
         if @post.save
             redirect_to city_post_path(city, @post)
           else 
-            flash.alert = "Title must be less than 200 characters and Content cannot be blank"
+            flash.alert = "Place must be less than 200 characters and Content cannot be blank"
             redirect_to new_city_post_path
           end
         
@@ -44,7 +44,7 @@ class PostsController < ApplicationController
         if @post.update(post_params)
             redirect_to city_post_path(city, @post)
           else 
-            flash.alert = "Title must be less than 200 characters and Content cannot be blank"
+            flash.alert = "Place must be less than 200 characters and Content cannot be blank"
             redirect_to edit_city_post_path
           end
     end
