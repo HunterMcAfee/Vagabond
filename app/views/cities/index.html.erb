@@ -1,23 +1,25 @@
+<%#= Brings in a video to be displayed in the background %>
 <div class="fullscreen-bg">
 	<video poster="" id="bgvid" playsinline autoplay muted loop>
-        <source src="https://fpdl.vimeocdn.com/vimeo-prod-skyfire-std-us/01/1866/8/209333087/716210798.mp4?token=1504216525-0x4b5eb50eb56eeafa0d8787b22492504d526fa88e" type="video/mp4">
+        <source src="clouds.mp4" type="video/mp4">
     </video>
 </div>
-<div class="container">
 
 <div class="row text-center">
-<h1 class="site-title-main">Welcome to Vagabond</h1>
+    <h1 class="site-title-main">Vagabond-Destinations</h1>
+    <h4 class="site-subtitle-main">Share your favorite spots around town!</h4>
 </div>
 
-<div class="row text-center">
-    <h1 class="city-title">Cities</h1>
-</div>
-<br/>
-<% @cities.each do |city| %>
     <div class="row text-center">
-        <%= link_to city.name, city, class: "btn btn-default btn-lg" %>
-        <br/><br/>
+        <h1 class="city-title">Cities</h1>
     </div>
-<% end %>
+    <br/>
 
+    <%#= Loops through cities and displays the name respectively %>
+    <% @cities.each do |city| %>
+        <div class="row text-center">
+            <%= link_to city.name, city, class: "btn btn-default btn-lg" %>
+            <br/><br/>
+        </div>
+    <% end %>
 </div>

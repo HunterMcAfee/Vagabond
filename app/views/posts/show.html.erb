@@ -1,5 +1,7 @@
 <div class="container">
-<div class="row">
+
+    <%#= Displays post with edit and delete buttons %>
+    <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-primary">
             <div class="panel-heading"><%= @post.title %></div>
@@ -18,7 +20,9 @@
             </div>
         </div>
     </div>
-<div class="row text-center">
-<%= link_to 'Back', city_path(@city), class: "btn btn-primary btn-lg" %>
-</div>
+
+    <div class="row text-center">
+        <%= link_to 'Back', city_path(@city), class: "btn btn-primary btn-lg" %>
+    </div>
+
 </div>

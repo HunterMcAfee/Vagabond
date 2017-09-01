@@ -2,6 +2,30 @@
 @import "bootswatch/sandstone/variables";
 @import "bootswatch/sandstone/bootswatch";
 
+
+.alert {
+    color: red;
+    font-size: 2em;
+    text-align: center;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+body { 
+    padding-top: 90px; 
+    font-family: "Helvetica", sans-serif;
+}
+.button-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.city-image {
+    width: 100%;
+    height: auto;
+}
+.city-title {
+    font-size: 6em;
+    color: white;
+}
 .home-splash-image-container {
     display: inline;
 }
@@ -11,33 +35,21 @@
 .home-splash-image {
     width: 100%;
 }
-
-.city-image {
-    width: 100%;
-    height: auto;
-}
-
-.navbar {
-    height: 70px;
-    border-bottom: none;
-}
-
 .logo {
     height: 60px;
     border: 0px;
     padding-bottom: 10px;
 }
-
+.navbar {
+    height: 70px;
+    border-bottom: none;
+}
 .site-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 5px;
 }
-body { 
-    padding-top: 90px; 
-}
-
 .site-title {
     font-size: 3em;
     text-decoration: none;
@@ -45,12 +57,21 @@ body {
     padding-left: 10px;
     padding-bottom: 10px;
 }
-
 .site-title:hover {
     text-decoration: none;
     color: #ced7e5;
 }
-
+.site-title-main {
+    font-size: 7em;
+    font-family: "Helvetica", sans-serif;
+    color: white;
+    font-weight: 500;
+}
+.site-subtitle-main {
+    font-size: 2em;
+    font-family: "Helvetica", sans-serif;
+    color: white;
+}
 video { 
     position: fixed;
     top: 50%;
@@ -61,30 +82,7 @@ video {
     height: auto;
     z-index: -100;
     transform: translateX(-50%) translateY(-50%);
- background: url('https://static.pexels.com/photos/314726/pexels-photo-314726.jpeg') no-repeat;
-  background-size: cover;
-  transition: 1s opacity;
-}
-
-.city-title {
-    font-size: 6em;
-}
-
-.site-title-main {
-    font-size: 7em;
-    font-family: cursive;
-    font-weight: 900;
-}
-
-.button-wrapper {
-    display: flex;
-    justify-content: space-between;
-}
-
-.alert {
-    color: red;
-    font-size: 2em;
-    text-align: center;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
+    background: url('https://static.pexels.com/photos/314726/pexels-photo-314726.jpeg') no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
 }

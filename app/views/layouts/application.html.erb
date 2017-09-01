@@ -9,6 +9,8 @@
   </head>
 
   <body>
+
+    <%#= Navbar bootstrap, includes logo and site name %>
     <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -20,10 +22,13 @@
     </div>
     </nav>
 
+    <%#= View logic for displaying the alert coming from edit and create routes %>
     <% if flash[:alert] %>
     <div class="alert"><%= flash[:alert] %></div>
     <% end %>
 
+    <%#= Displays rails views %>
     <%= yield %>
+    
   </body>
 </html>
