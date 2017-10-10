@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+    before_action :authenticate_user!
+
     def index
         # Grabs all posts for listing in the index
         @user = current_user.id
